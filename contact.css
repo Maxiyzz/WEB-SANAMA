@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+/* Body styles */
+  body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: #FDEFE6;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 20px;
+  }
+  
+  /* Kontainer utama */
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Link Navigasi */
+  .nav-button {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #5A6563;
+  }
+  
+  /* Navbar Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo img {
+    max-height: 60px;
+    margin-right: 10px;
+  }
+  
+  .nav-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+  
+    .nav-button {
+      display: none; /* Sembunyikan link navigasi awalnya */
+      flex-direction: column;
+      align-items: center;
+      background: #FDEFE6;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-button.active {
+      display: flex; /* Tampilkan navigasi saat aktif */
+    }
+  
+    .navbar a {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  
+    .nav-logo {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Untuk menghindari elemen keluar dari border */
+    animation: fadeIn 1s ease-in-out; /* Animasi saat muncul */
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    animation: slideInLeft 1s ease-in-out; /* Animasi masuk dari kiri */
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.info-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s; /* Animasi hover */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #d4edda;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    animation: slideInRight 1s ease-in-out; /* Animasi masuk dari kanan */
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s, box-shadow 0.3s; /* Efek fokus */
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+    border: 1px solid #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.contact-form form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Efek hover */
+}
+
+.contact-form form button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Media Query: Tablet */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contact-info {
+        border-radius: 10px 10px 0 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-form {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* Media Query: Mobile */
+@media (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 24px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .contact-form form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Section styles */
+.section {
+  width: 80%;
+  padding: 20px;
+  background: #fff;
+  margin: 0px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Google Maps */
+#map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#map h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section {
+    width: 90%;
+  }
+
+  #map h2 {
+    font-size: 1.2rem;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #333; /* Warna dasar footer */
+  color: #fff; /* Warna teks */
+  padding: 40px 20px;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Pusatkan semua elemen */
+  gap: 20px;
+}
+
+.footer-about {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-donasi {
+  text-align: center; /* Pusatkan tombol */
+  margin-top: 20px;
+}
+
+.btn-donasi {
+  display: inline-block;
+  background-color: #ff9800; /* Warna merah cerah */
+  color: white; /* Warna teks */
+  padding: 15px 30px; /* Spasi dalam tombol */
+  font-size: 18px; /* Ukuran font */
+  font-weight: bold;
+  text-decoration: none; /* Hilangkan garis bawah */
+  border-radius: 8px; /* Membuat tombol bulat */
+  transition: background-color 0.3s, transform 0.2s; /* Animasi transisi */
+  margin-left: -170px;
+}
+
+.btn-donasi:hover {
+  background-color: #d87b00; /* Warna lebih gelap saat hover */
+  transform: scale(1.05); /* Membesar sedikit saat hover */
+}
+
+.btn-donasi:active {
+  transform: scale(0.95); /* Efek saat tombol ditekan */
+}
+
+.footer-links {
+  flex: 1;
+  margin: 0 300px; /* Tambahkan jarak kiri dan kanan */
+}
+
+.footer-contact {
+  flex: 1;
+  margin-right: 80px; /* Tambahkan lebih banyak jarak ke kanan */
+}
+
+
+.footer-about h3 {
+  font-size: 24px;
+  color: #ff9800; /* Warna mencolok untuk logo/heading */
+}
+
+.footer-about img {
+  max-height: 60px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px; 
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #ff9800;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff9800;
+}
+
+.footer-contact p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: #ff9800;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Elemen disusun vertikal */
+    align-items: center;    /* Semua elemen di tengah */
+  }
+
+  .footer-links,
+  .footer-contact {
+    margin: 0;             /* Hilangkan margin untuk elemen */
+    text-align: center;    /* Teks tetap di tengah */
+  }
+}
+
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .btn-donasi {
+      padding: 12px 24px; /* Kurangi padding */
+      font-size: 16px; /* Ukuran font lebih kecil */
+  }
+}
+
+/* Responsif untuk layar sangat kecil (ponsel) */
+@media (max-width: 480px) {
+  .btn-donasi {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}
