@@ -1,0 +1,317 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: #FDEFE6;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 20px;
+  }
+  
+  /* Kontainer utama */
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Link Navigasi */
+  .nav-button {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #5A6563;
+  }
+  
+  /* Navbar Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo img {
+    max-height: 60px;
+    margin-right: 10px;
+  }
+  
+  .nav-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+  
+    .nav-button {
+      display: none; /* Sembunyikan link navigasi awalnya */
+      flex-direction: column;
+      align-items: center;
+      background: #FDEFE6;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-button.active {
+      display: flex; /* Tampilkan navigasi saat aktif */
+    }
+  
+    .navbar a {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  
+    .nav-logo {
+      margin-bottom: 10px;
+    }
+  }
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    background-color: #fff;
+    border-color: #ff9800;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #ff9800;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background: #ff9800;
+    transform: scale(1.02);
+}
+
+form button:active {
+    transform: scale(0.98);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Warna dasar footer */
+    color: #fff; /* Warna teks */
+    padding: 40px 20px;
+  }
+  
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan semua elemen */
+    gap: 20px;
+  }
+  
+  .footer-about {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .footer-donasi {
+    text-align: center; /* Pusatkan tombol */
+    margin-top: 20px;
+  }
+  
+  .btn-donasi {
+    display: inline-block;
+    background-color: #ff9800; /* Warna merah cerah */
+    color: white; /* Warna teks */
+    padding: 15px 30px; /* Spasi dalam tombol */
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold;
+    text-decoration: none; /* Hilangkan garis bawah */
+    border-radius: 8px; /* Membuat tombol bulat */
+    transition: background-color 0.3s, transform 0.2s; /* Animasi transisi */
+    margin-left: -170px;
+  }
+  
+  .btn-donasi:hover {
+    background-color: #d87b00; /* Warna lebih gelap saat hover */
+    transform: scale(1.05); /* Membesar sedikit saat hover */
+  }
+  
+  .btn-donasi:active {
+    transform: scale(0.95); /* Efek saat tombol ditekan */
+  }
+  
+  .footer-links {
+    flex: 1;
+    margin: 0 300px; /* Tambahkan jarak kiri dan kanan */
+  }
+  
+  .footer-contact {
+    flex: 1;
+    margin-right: 80px; /* Tambahkan lebih banyak jarak ke kanan */
+  }
+  
+  
+  .footer-about h3 {
+    font-size: 24px;
+    color: #ff9800; /* Warna mencolok untuk logo/heading */
+  }
+  
+  .footer-about img {
+    max-height: 60px;
+    margin-right: 10px;
+  }
+  
+  .footer-logo {
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px; 
+  }
+  
+  .footer-socials a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ff9800;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ff9800;
+  }
+  
+  .footer-contact p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .footer-contact i {
+    margin-right: 10px;
+    color: #ff9800;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Elemen disusun vertikal */
+      align-items: center;    /* Semua elemen di tengah */
+    }
+  
+    .footer-links,
+    .footer-contact {
+      margin: 0;             /* Hilangkan margin untuk elemen */
+      text-align: center;    /* Teks tetap di tengah */
+    }
+  }
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .btn-donasi {
+        padding: 12px 24px; /* Kurangi padding */
+        font-size: 16px; /* Ukuran font lebih kecil */
+    }
+}
+
+/* Responsif untuk layar sangat kecil (ponsel) */
+@media (max-width: 480px) {
+    .btn-donasi {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+  
